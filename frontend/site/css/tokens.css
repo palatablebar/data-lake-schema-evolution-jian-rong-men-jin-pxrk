@@ -1,0 +1,59 @@
+/* 设计令牌：工程蓝图 / 网格纸 + 青灰 + 红色批注 + 制图等宽。
+   规则：oklch() 色板；禁纯黑纯白；双字体（IBM Plex Mono 制图等宽 + Noto Sans SC 阅读体）；模块化字号。
+   本文件为 schemagate 独有视觉基底，勿与其它项目复用。 */
+:root {
+  /* 图纸底色：冷灰网格纸，非纯白 */
+  --paper: oklch(0.948 0.009 218);
+  --paper-2: oklch(0.915 0.013 218);
+  --paper-3: oklch(0.872 0.017 220);
+  --paper-4: oklch(0.828 0.021 222);
+
+  /* 墨色：深青灰，非纯黑 */
+  --ink: oklch(0.298 0.031 236);
+  --ink-soft: oklch(0.455 0.027 232);
+  --ink-faint: oklch(0.618 0.021 230);
+
+  /* 制图线 */
+  --rule: oklch(0.812 0.024 216);
+  --rule-strong: oklch(0.655 0.036 220);
+  --grid-line: oklch(0.775 0.032 214 / 0.55);
+  --grid-major: oklch(0.70 0.040 214 / 0.45);
+
+  /* 青灰主色 */
+  --accent: oklch(0.442 0.072 226);
+  --accent-soft: oklch(0.556 0.062 226);
+  --accent-wash: oklch(0.905 0.026 222);
+
+  /* 红色批注 */
+  --annot: oklch(0.502 0.168 27);
+  --annot-soft: oklch(0.60 0.140 28);
+  --annot-wash: oklch(0.925 0.038 30);
+
+  --ok: oklch(0.478 0.078 168);
+  --ok-wash: oklch(0.912 0.030 168);
+  --warn: oklch(0.628 0.106 76);
+  --warn-wash: oklch(0.932 0.032 80);
+  --danger: oklch(0.502 0.168 27);
+  --danger-wash: oklch(0.925 0.038 30);
+  --info: oklch(0.502 0.052 244);
+  --info-wash: oklch(0.922 0.022 244);
+
+  /* 双字体：制图等宽做标题/数字，Noto Sans SC 做正文 */
+  --font-display: 'IBM Plex Mono', 'SFMono-Regular', ui-monospace, monospace;
+  --font-body: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', ui-monospace, monospace;
+
+  --fs-xs: 0.70rem;
+  --fs-sm: 0.80rem;
+  --fs-md: 0.92rem;
+  --fs-lg: 1.12rem;
+  --fs-xl: clamp(1.42rem, 2.0vw, 2.0rem);
+  --fs-2xl: clamp(1.9rem, 3.2vw, 3.0rem);
+
+  --pad: clamp(13px, 1.5vw, 26px);
+  --rail: 234px;
+  --radius: 1px;             /* 工程图：直角为主 */
+  --rule-w: 1px;
+  --shadow: 4px 4px 0 var(--paper-3), 0 22px 44px -38px oklch(0.34 0.03 234 / 0.6);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
